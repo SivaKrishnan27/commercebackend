@@ -14,7 +14,7 @@ app.use(express.json())
 
 // routes
 app.get('/',(req,res)=>{
-res.send('youre connected with ecommerce api');
+res.json({message:'youre connected with ecommerce api'});
 let stamp = new Date().toLocaleString()
 console.log(`Logged in ${stamp}`)
 })
