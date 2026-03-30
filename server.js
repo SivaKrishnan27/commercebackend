@@ -1,4 +1,5 @@
 const express = require("express")
+const cors = require("cors")
 const app = express();
 
 const productsRouter = require('./routes/products')
@@ -6,6 +7,9 @@ const orderRouter = require('./routes/orderList')
 
 const PORT = 8080;
 // middle ware
+app.use(cors({
+   origin: '*'
+}))
 app.use(express.json())
 
 // routes
